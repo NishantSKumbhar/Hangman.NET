@@ -45,12 +45,12 @@ namespace Hangman
                 {
                     Console.Write(ans[i] + " ");
                 }
-                Console.Write("\nAnswer Word  : ");
-                for (int i = 0; i < ansArr.Length; i++)
-                {
-                    Console.Write(ansArr[i] + " ");
-                }
-                Console.WriteLine($"\nans count : {ans.Length}");
+                //Console.Write("\nAnswer Word  : ");
+                //for (int i = 0; i < ansArr.Length; i++)
+                //{
+                //    Console.Write(ansArr[i] + " ");
+                //}
+               
                 Console.WriteLine("\nUsed Characters : ");
                 printUsedLetters(usedLetters);
                 Console.WriteLine("\nEnter the Character : ");
@@ -101,6 +101,16 @@ namespace Hangman
                 Console.ReadKey();
                 Console.Clear();
             } while(LIVES > 0 && !win(ans));
+
+            if (win(ans))
+            {
+                Console.WriteLine("Congratulations , You Win the Game.");
+            }
+            else
+            {
+                Console.WriteLine("You Lost the Game : ( ");
+                Console.WriteLine(" +---+\r\n  |   |\r\n  O   |\r\n /|\\  |\r\n / \\  |\r\n      |\r\n=========");
+            }
         }
 
         static bool win(char[] ans)
