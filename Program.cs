@@ -38,7 +38,7 @@ namespace Hangman
                 Console.WriteLine("----------------------------------------");
                 Console.WriteLine("\t ||   Hangman Game   ||\t");
                 Console.WriteLine("----------------------------------------");
-                Console.WriteLine($"Hidden Word  : {hiddenWord}");
+                //Console.WriteLine($"Hidden Word  : {hiddenWord}");
                 Console.WriteLine($"*** Lives left : {LIVES} ****");
                 Console.Write("\nCurrent Word State : ");
                 for (int i = 0; i < ans.Length; i++)
